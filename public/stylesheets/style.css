@@ -1,0 +1,306 @@
+*   {
+    box-sizing:border-box
+}
+
+body {
+    margin: 0px;
+    font: 14px 'Quicksand', Helvetica, Arial, sans-serif;
+    background-color: #dedddd;
+}
+
+a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+header {
+    position: relative;
+    top: 0;
+}
+header .logo {
+    font-family: 'Leckerli One', cursive;
+    color: #f2f2f2;
+    margin: 0px;
+    letter-spacing: 0px;
+    font-weight: normal;
+}
+header .dropdown {
+    display: none;
+    box-shadow: 0px 0px 19px #987c7c;
+}
+main {
+    background-color: #f2f2f2;
+    margin: auto;
+    position: relative;
+}
+.header {
+    background-color: #c3a6a6;
+    box-shadow: 0px 0px 19px #987c7c;
+    z-index: 1000;
+    position: relative;
+}
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:  flex-end;
+}
+.absolute {
+    position: absolute;
+}
+
+
+/* --------------------------- Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+.slideshow-container img {
+    object-fit: cover;
+}
+
+.slides {
+    display: none;
+    position: relative;
+}
+.slides .absolute {
+    top: 35%;
+    width: 100%;
+}
+.slides .flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    padding: 22px 16px 19px;
+    color: white;
+    transition: 0.6s ease;
+}
+
+/* Position the "next button" to the right */
+ .next {
+    border-radius: 10px 0 0 10px;
+}
+ .prev {
+     border-radius: 0 10px 10px 0;
+ }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Caption text */
+.absolute .text {
+    font-family: 'Leckerli One', cursive;
+    color: #464646;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+/* The dots/bullets/indicators */
+.dot {
+    cursor:pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #b8dfee;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #79a9b0;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    /* float: left;
+    padding: 15px;
+    border: 1px solid red; */
+}
+
+/**************************************************************************** MEDIA QUERIES ********************/
+@media only screen and (max-width: 767px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    header .logo {
+        font-size: 24px;
+        padding: 10px 0px 0px 10px;
+    }
+    header .col-8 {
+        padding: 10px 0px;
+    }
+    .slideshow-container img {
+        max-height: 200px;
+    }
+
+    .nav-menu {
+        background-color: #d5bcbc;
+    }
+    .nav-item {
+        align-items: center;
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: center;
+        padding: 10px;
+        background-color: #d5bcbc!important;
+        border-left: #c3a6a6 solid 1px;
+        border-left-style: dashed;
+    }
+    .prev, .next {
+        font-size: 30px;
+    }
+    .absolute .text {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: 426px) {
+    /* for tablets */
+    header .logo {
+        font-size: 38px;
+        padding-left: 12px;
+    }
+    header .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        margin: auto;
+    }
+    header .dropdown {
+        background-color: #d5bcbc;
+        width: 75%;
+        top: 100%;
+        position: absolute;
+        left: 12.5%;
+        z-index: 10;
+    }
+    main {
+        width: 75%;
+    }
+    .nav-menu {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .nav-item {
+        align-items: center;
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: center;
+        border-left: #d5bcbc dashed 1px;
+        padding: 2px 12px;
+    }
+    .slideshow-container {
+        padding-top: 2%
+    }
+    .slideshow-container img {
+        max-height: 300px;
+    }
+    .absolute .text {
+        margin: 0px 20px;
+        font-size: 60px;
+        top: 35%;
+    }
+    .prev, .next {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* for laptops */
+    header .logo {
+        font-size: 38px;
+        padding-left: 12px;
+    }
+    header .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        margin: auto;
+    }
+    header .dropdown {
+        background-color: #d5bcbc;
+        width: 75%;
+        top: 100%;
+        position: absolute;
+        left: 12.5%;
+        z-index: 10;
+    }
+    main {
+        width: 75%;
+    }
+    .nav-menu {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .nav-item {
+        align-items: center;
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: center;
+        padding: 25px 12px!important;
+        border: none!important;
+    }
+    .slideshow-container {
+        padding-top: 2%
+    }
+    .slideshow-container img {
+        max-height: 300px;
+    }
+    .prev, .next {
+        font-size: 50px;
+    }
+    .absolute .text {
+        margin: 0px 50px;
+        padding: 8px 12px;
+        font-size: 65px;
+        top: 35%;
+    }
+}

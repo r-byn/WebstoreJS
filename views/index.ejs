@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title><%= title %></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="/javascripts/script.js"></script>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  </head>
+  <body>
+    <% include templates/header.ejs%>
+    <main>
+        <div class="slideshow-container">
+            <div>
+                <div class="slides fade" id="slide0">
+                    <img src="/images/img1.jpg" style="width:100%" class="slide-img">
+                    <div class="absolute">
+                        <div class="flex-container">
+                            <div>
+                                <a class="prev">&#10094;</a>
+                            </div>
+                            <div class="text">Blankets</div>
+                            <div>
+                                <a class="next">&#10095;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides fade" id="slide1">
+                    <img src="/images/img2.jpg" style="width:100%" class="slide-img">
+                    <div class="absolute">
+                        <div class="flex-container">
+                            <div>
+                                <a class="prev">&#10094;</a>
+                            </div>
+                            <div class="text">Patterns</div>
+                            <div>
+                                <a class="next">&#10095;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slides fade" id="slide2">
+                    <img src="/images/img3.jpg" style="width:100%" class="slide-img">
+                    <div class="absolute">
+                        <div class="flex-container">
+                            <div>
+                                <a class="prev">&#10094;</a>
+                            </div>
+                            <div class="text">Toys</div>
+                            <div>
+                                <a class="next">&#10095;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" id="dot0"></span>
+                <span class="dot" id="dot1"></span>
+                <span class="dot" id="dot2"></span>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div>
+                <img src="/images/img1.jpg" style="width:30px">
+            </div>
+            <div>
+                <img src="/images/img1.jpg" style="width:30px">
+            </div>
+            <div>
+                <img src="/images/img1.jpg" style="width:30px">
+            </div>
+            <div>
+                <img src="/images/img1.jpg" style="width:30px">
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
